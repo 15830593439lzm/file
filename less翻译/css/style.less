@@ -1,0 +1,86 @@
+@import url("reset.css");
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html{
+    font-size:62.5%;
+}
+*{padding: 0;margin: 0;list-style: none;}
+body{background: #ccc;}
+.wrap{
+    margin: 100px auto;
+    .whb(900px,300px,none);
+    background-color:rgba(332,566,666,0.5) ;
+    padding: 20px;
+    box-shadow: 0 0 8px #434343;
+    border-radius: 20px;
+    .language{
+        position: relative;
+        .whb(100px,30px,none);
+        text-align: center;
+        line-height: 30px;
+        padding: 0 30px;
+        margin: 10px;
+        border: 1px solid #434343;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "楷体";
+        font-size: 18px;
+        .languages{
+            position: absolute;
+            top: 30px;
+            left: -1px;
+            border: 1px solid #434343;
+            border-radius: 5px;
+            .whb(353px,auto,#fff);
+            display: none;
+            ul{
+                li{
+                    float: left;
+                    .whb(78px,40px,none); 
+                    margin: 4px;
+                    border: 1px dashed #ccc;
+                }
+            }
+        }
+    }
+    .input,.show{
+        .whb(430px,150px,#fff);
+        float: left;
+        color: #000;
+        margin: 10px;
+        box-shadow: 0 0 8px #222;
+        textarea{
+            z-index: 3;
+            border: 0;
+            resize: none;
+            outline: none;
+            height: 100%;
+            width: 400px;
+            color: #333;
+            font-family: "微软雅黑";
+            margin: 0;
+            padding: 0;
+            line-height: 40px;
+            font-size: 20px;
+            text-indent: 10px;//首行缩进  在ie 678 下不兼容 主要是ie7 (可以用padding解决)
+        }
+    }
+    .btn{
+        display: inline-block;
+        .whb(140px,30px,#368);
+        box-shadow: 0 0 4px #ccc;
+        float: right;
+        margin: 10px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 20px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: "楷体";
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		html,body{
+			height: 100%;
+		}
+		canvas{
+			/*width: 500px;
+			height: 500px;*/
+			background: #000;
+			display: block;
+		}
+	</style>
+	<body>
+		<canvas id="canvas" width="500" height="500">您的浏览器不支持canvas标签</canvas>
+	</body>
+	<script type="text/javascript">
+		var can = document.getElementById("canvas");
+		//设置绘图环境
+		var cxt = can.getContext("2d");
+		//获取浏览器窗口的宽高
+		var h =can.height = window.innerHeight;
+		var w =can.width= window.innerWidth;
+		//让画布的宽高跟随浏览器的变化改变
+		window.onresize = function(){
+			h = can.height = window.innerHeight;
+			w = can.width= window.innerWidth;
+		}
+		
+		//绘制矩形
+		//cxt.fillRect(0,0,100,100);//绘制的坐标点x,y  宽高w,h
+		//cxt.fill();填充方法（实心）cxt.stroke();笔触方法（空心）
+		//cxt.rect(x,y,w,h);//规定矩形的路径
+		//绘制圆形
+		     //设置圆形的路径
+//		cxt.arc(250,250,50,0,Math.PI*2,false);//圆心坐标：X，Y    逆时针
+//	    var x = 100,y=0;
+//	    setInterval(function(){
+//	    	y++;
+//	    	cxt.clearRect(0,0,x,y);//清除画布内容
+//	    	cxt.fillRect(x,y,50,50);
+//	    },1000/60);
+        //面向对象
+        var drops = [];
+           //创建雨滴对象
+           function Drop(){}
+           	//添加原型对象方法
+           	Drop.prototype = {
+           		init:function(){//初始化方法(设置每个雨滴的初始属性)
+           			//设置坐标
+           			this.x = random(0,w);
+           			this.y = 0;
+           			//y方向的速度值
+           			this.vy = random(4,5);
+           		    //雨滴下落的最大高度
+           		    this.l = random(0.8*h,0.9*h);//80%--90%
+           		    //波纹的初始半径
+           		    this.r = 1;
+           		    this.vr = 1;//半径增大的速度
+           		    //判断雨滴消失的透明度
+           		    this.a=1;//-->0
+           		    this.va = 0.96;//透明度的变化系数
+           		},
+           		draw:function(){//绘制图形
+           			if(this.y>this.l){//雨滴已经下落到指定位置  开始绘制圆形
+           				
+           				//先开始路径
+           				cxt.beginPath();//先开始路径
+           				cxt.arc(this.x,this.y,this.r,0,2*Math.PI,false);
+           				cxt.strokeStyle="rgba(0,255,255,"+this.a+")";
+           				cxt.stroke();
+           				
+           			}else{//绘制下落的雨滴
+           				
+           				cxt.fillStyle = "rgb(0,255,255)";
+           			    cxt.fillRect(this.x,this.y,1,10);
+           			}
+           			this.update();
+           		},
+           		update:function(){//跟新坐标位置
+           			if (this.y<this.l) {
+           				this.y += this.vy;
+           			}else{//雨滴到了指定位置  开始绘制波纹
+           				if(this.a>0.03){
+           					this.r += this.vr;
+           					if (this.r >50) {
+           						this.a *= this.va;
+           					}
+           				}else{
+           					//重新初始化雨滴数据
+           					this.init();
+           				}
+           			}
+           			
+           		}
+           	}
+           	//新建一个雨滴实例化对象
+            //var drop = new Drop();
+            //drop.init();//初始化
+            //drop.draw();//绘制
+           for (var i=0;i<30;i++) {
+           	  setTimeout(function(){
+           	  	  var drop = new Drop();
+	           	  drop.init();
+	           	  drops.push(drop);
+           	  },i*300);
+           	  
+           }
+           //console.log(drops);
+           
+           function move(){
+                //cxt.clearRect(0,0,w,h);
+                //先绘制透明层再绘制雨滴 雨滴就把先绘制的透明层覆盖下一次再绘制透明层就会把之前绘制的雨滴覆盖
+                cxt.fillStyle = "rgba(0,0,0,0.1)";
+                cxt.fillRect(0,0,w,h);
+	           	for (var i=0;i<drops.length;i++) {
+	           	  drops[i].draw();
+	            }
+	           	requestAnimationFrame(move);//启动move动画
+           }
+           move();
+           //生成随机数的方法
+           function random(min,max){
+           	    return Math.random()*(max-min)+min;//min~max之间的随机数
+           }
+	       
+	    
+	</script>
+</html>
