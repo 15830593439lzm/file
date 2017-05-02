@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!--头部引入信息-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="language">
+				<span>自动检测</span>
+				<div class="languages">
+					<ul>
+						<li data-ln='zh'>中文</li>
+						<li data-ln='en'>英语</li>
+						<li data-ln='yue'>粤语</li>
+						<li data-ln='jp'>日语</li>
+						<li data-ln='kor'>韩语</li>
+						<li data-ln='fra'>法语</li>
+						<li data-ln='spa'>西班牙语</li>
+						<li data-ln='ru'>俄语</li>
+						<li data-ln='pl'>波兰语</li>
+						<li data-ln='fin'>芬兰语</li>
+						<!--data标签自定义属性data-ln-->
+					</ul>
+				</div>
+			</div>
+			<div class="input">
+				<textarea name="text" id="text" rows="10" cols="30"></textarea>
+			</div>
+			<div class="show"></div>
+			<span class="translate btn">点击翻译</span>
+			<span class="empty btn">清空</span>
+		</div>
+	</body>
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+	<script src="js/MD5.js"></script>
+	<script type="text/javascript">
+		var show = document.querySelector(".show");
+		(function() { //自执行函数体 --为了变量不污染全局作用域   （闭包是一个函数）
+			//获取到所有的li里的data-ln start
+            var all = document.getElementsByTagName("li");
+		    //获取到所有的li里的data-ln end
+			var enn; 
+			for (var i=0;i<all.length;i++) {
+				all[i].onclick = function() {
+					enn=this.attributes[0].nodeValue;
+				}
+			}
+			var text = document.querySelector('#text'); /*只能获取一条(如果有很多也只获得第一个)  最新的原生js选择器  兼容ie8*/ //var texts = document.querySelectorAll("li");//可以选择所有的li
+            var translate = document.querySelector("span.translate");
+			var empty = document.querySelector("span.empty");
+			var lan; /*翻译语言*/
+			var str; /*输入文本*/
+			translate.onclick = trans; /*点击翻译事件*/
+			function trans() {
+				if(text.value && text.value.length > 0) {
+					var pat = /[^a-zA-Z0-9\_\s*\u4e00-\u9fa5]/g; //正则匹配非法字符
+					var strText = text.value;
+					if(pat.test(strText) === true) { //===在这里减少判断
+						str = strText.replace(pat, '');
+						console.log(str)
+					} else {
+						str = text.value;
+					}
+					var appid = "2015063000000001"; /*访问api账号*/
+					var key = "12345678"; /*访问api密码*/
+					var query = str; /*需要翻译的字符*/
+					var salt = Date.now(); /*获取当前时间戳*/
+					var str1 = appid + query + salt + key;
+					var sign = MD5(str1);
+					var from = 'auto';
+					var to = enn; //将外面的方法值赋值到to
+					jsonP({
+						url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+						method: 'GET',
+						dataType: 'JSONP',
+						data: {
+							q: query,
+							appid: appid,
+							salt: salt,
+							from: from,
+							to: to,
+							sign: sign
+						}
+					})
+				}
+			}
+
+			function jsonP(opt) {
+				opt = opt || {};
+				opt.method = opt.method || 'POST';
+				opt.url = opt.url || '';
+				opt.data = opt.data || null;
+				opt.dataType = opt.dataType || 'JSONP';
+				var params = [];
+				for(var key in opt.data) {
+					params.push(key + "=" + opt.data[key]);
+				}
+				var postData = params.join('&');
+				if(opt.dataType === 'JSONP') {
+					creatScript(opt.url, postData)
+				}
+			}
+
+			function creatScript(url, data) {
+				var oScript = document.createElement('script');
+				oScript.src = url + '?' + data + '&callback=getR';
+				document.body.appendChild(oScript);
+			}
+			choose(); //执行这个方法
+			function choose() {
+				var $lan = $('.language');
+				var $lans = $('.languages ul li');
+				$lan.click(function() {
+					$('.languages').slideToggle(600); //slideDown()   slideUp()
+				})
+				$lans.click(function() {
+					lan = $(this).data('ln'); //data标签自定义属性   data('ln')自定义方法的格式
+					//					console.log(lan);
+					$lan[0].children[0].innerHTML = $(this).text(); //jquery对象转化成js对象  相互切换
+				})
+			}
+		})()
+
+		function getR(res) {
+			//      	console.log(res);
+			show.innerHTML = res.trans_result[0].dst;
+		}
+	</script>
+	<!--<script src="http://api.fanyi.baidu.com/api/trans/vip/translate?q=apple&from=en&to=zh&appid=2015063000000001&salt=1435660288&sign=f89f9594663708cl605f3d736d0ld2d4&callback=getR"></script>-->
+	<!--
+    	1.jsonp的测试地址
+    	2.通过script标签模拟一个真实的数据访问
+    	3.真实的是动态创建     (开发中将script标签注释)
+    -->
+
+</html>
