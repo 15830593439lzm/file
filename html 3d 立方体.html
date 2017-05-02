@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-cn">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="Jief King@温馨">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>html 3d 立方体</title>
+  <style>
+      body{background: #111}
+    .con{
+        position:absolute;
+        width:150px;
+        height:150px;
+        transform-style:preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(75px);
+        /*perspective:300px;*/
+        margin:auto;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        animation: gg 10s linear infinite;
+    }
+    @keyframes gg {
+        0%{
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(75px);
+        }
+        100%{
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) /*translateX(0)*/ translateZ(75px);
+        }
+    }
+    .con div{
+        line-height: 150px;
+        text-align: center;
+        font-size:50px;
+        position:absolute;
+        box-sizing:border-box;
+        width:150px;
+        height:150px;
+        border:1px solid purple;
+    }
+    .con div:nth-child(1){
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+        top:-150px;
+    }
+    .con div:nth-child(2){
+        transform: rotateX(-90deg);
+        transform-origin: top;
+        top:150px;
+    }
+    .con div:nth-child(3){
+        background: #fff;
+        transform: rotateY(-90deg);
+        transform-origin: right;
+        left:-150px;
+    }
+    .con div:nth-child(4){
+        background: palegreen;
+        transform: rotateY(90deg);
+        transform-origin: left;
+        left:150px;
+    }
+    .con div:nth-child(5){
+    }
+    .con div:nth-child(6){
+        transform: translateZ(-150px);
+    }
+  </style>
+ </head>
+ <body>
+  <div class="con">
+	<div>上</div>
+	<div>下</div>
+	<div>左</div>
+	<div>右</div>
+	<div>前</div>
+	<div>后</div>
+  </div>
+ <div style="width: 50%;background:red;height: 500px"></div>
+ </body>
+</html>

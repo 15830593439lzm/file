@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+			body{
+				background-color:#000000;
+			}
+			#wrap{/*父级盒子*/
+				perspective: 800px;/*场景景深*/
+			}
+			.box{/*子集图片*/
+				transform-style: preserve-3d;/*场景3D*/
+				width: 120px;
+				height: 180px;
+				margin: 250px auto;
+				position: relative;
+				transform:rotateX(-10deg) rotateY(0deg);
+			}
+			.box img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				box-shadow: 0px 0px 10px #8A2BE2;  /*水平偏移   垂直偏移    阴影半径模糊程度   颜色*/
+				border-radius: 5px;
+			}
+			.box p{
+				width: 1200px;
+				height: 1200px;
+				background: -webkit-radial-gradient(center center,600px 600px,rgba(244,23,234,.3),rgba(0,0,0,0));/*径向渐变火狐兼容*/
+				border-radius: 50%;
+				margin-left: -600px;
+				transform: rotateX(90deg) translateZ(400px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="box">
+				<img src="img/1.jpg"/>
+				<img src="img/2.jpg"/>
+				<img src="img/3.jpg"/>
+				<img src="img/4.jpg"/>
+				<img src="img/5.jpg"/>
+				<img src="img/6.jpg"/>
+				<img src="img/7.jpg"/>
+				<img src="img/9.jpg"/>
+				<img src="img/10.jpg"/>
+				<img src="img/14.jpg"/>
+				<img src="img/15.jpg"/>
+				<p></p>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload = function(){
+			var aImg = document.getElementsByTagName("img");
+			var oBox = document.getElementsByClassName("box")[0];
+			var oImgLength = aImg.length;
+			var Deg = 360/oImgLength;
+			//获取旋转的平均值
+			var nowX,nowY,minuX,minuY,roX=0,roY=-10,timer;
+			
+			for(var i=0;i<oImgLength;i++){
+				aImg[i].style.transform = 'rotateY('+Deg*i+'deg) translateZ(350px)';
+				aImg[i].style.transition ='transform 1s'+(oImgLength-i-1)*0.1+'s';
+			}
+			
+			Top();
+			window.onresize = Top;//改变高度
+			function Top(){//上下跟着居中
+				var WH = document.documentElement.clientHeight;
+				oBox.style.marginTop = WH / 2 - 180 +"px";
+			}
+			
+			document.onmousedown = function(e){//鼠标按下
+//				return false;//禁止鼠标按下拖动
+				
+				e=e||window.event;  //火狐与IE一个兼容方法  ||或者
+				var lastX=e.clientX;
+				var lastY=e.clientY;
+				
+				this.onmousemove = function(e){//鼠标滑动
+					e=e||window.event;  //火狐与IE一个兼容方法  ||或者
+					clearInterval(timer);
+					nowX=e.clientX;
+					nowY=e.clientY;
+					minuX = nowX - lastX;//现在的 - 初始的值
+					minuY = nowY - lastY;//现在的 - 初始的值
+					roX += minuX*0.2;
+					roY -= minuY*0.1;
+					oBox.style.transform = 'rotateX('+roY+'deg) rotateY('+roX+'deg)';
+					//console.log(minuX,minuY);
+					//var oDiv = document.createElement("div");//创建一个div
+					//oDiv.style.cssText = 
+					//'width:5px;height:5px;background:red;position:fixed;top:'+nowY+'px;left:'+nowX+'px;';
+					//this.body.appendChild(oDiv);//添加元素    画线段
+					lastX = nowX;
+					lastY = nowY;
+				}
+				
+				this.onmouseup = function(){//鼠标松开
+					this.onmousemove = null;//清除鼠标滑动事件
+				    timer = setInterval(function(){
+				    	minuX *= 0.95;//40 = 40*0.95; 
+				    	minuY *= 0.95; 
+				    	roX += minuX*0.2;
+				    	roY -= minuY*0.1;
+				    	oBox.style.transform = 'rotateX('+roY+'deg) rotateY('+roX+'deg)';
+				        if (Math.abs(minuX) < 0.1 &&  Math.abs(minuY) < 0.1) {
+				        	clearInterval(timer);//清除定时器
+				        }
+				    },13);
+				}
+				return false;
+			}
+		}
+		    
+	</script>
+</html>
