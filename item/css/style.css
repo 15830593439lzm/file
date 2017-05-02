@@ -1,0 +1,347 @@
+@import url("reset.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+#header,
+#nav,
+#Cont,
+#footer {
+  margin: auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+#header {
+  width: 990px;
+  height: 62px;
+  background-color: #ebebeb;
+}
+#header #I {
+  margin: 19px 0 0 30px;
+}
+#header #S {
+  width: 115px;
+  height: 14px;
+  margin: 11px 22px;
+}
+#header #S .S1 {
+  float: left;
+  margin-right: 5px ;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/theme.gif) no-repeat 0px 0px;
+}
+#header #S .S2 {
+  float: left;
+  margin-right: 5px ;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/theme.gif) no-repeat -20px 0px;
+}
+#header #S .S3 {
+  float: left;
+  margin-right: 5px ;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/theme.gif) no-repeat -40px 0px;
+}
+#header #S .S4 {
+  float: left;
+  margin-right: 5px ;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/theme.gif) no-repeat -60px 0px;
+}
+#header #S .S5 {
+  float: left;
+  margin-right: 5px ;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/theme.gif) no-repeat -80px 0px;
+}
+#header #S .S6 {
+  float: left;
+  margin-right: 5px ;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/theme.gif) no-repeat -100px 0px;
+}
+#nav {
+  clear: both;
+  width: 960px;
+  list-style: none;
+  border: 1px solid #d5dce8;
+  border-top: none;
+  height: 38px;
+  padding: 0 15px;
+  background: #4a4a4a;
+}
+#nav li {
+  float: left;
+  display: block;
+  background: none;
+  position: relative;
+  z-index: 999;
+  margin: 0 1px;
+}
+#nav li a {
+  display: block;
+  font-weight: 700;
+  line-height: 38px;
+  text-decoration: none;
+  color: #FFF;
+  padding: 0px 12px;
+}
+#nav li a:hover,
+#nav li a.hov {
+  background-color: #fff;
+  color: #576482;
+}
+#nav ul {
+  background: #6e6e6e;
+  position: absolute;
+  left: 1px;
+  display: none;
+  list-style: none;
+  padding-bottom: 3px;
+}
+#nav ul li {
+  width: 180px;
+  float: left;
+  border-top: 1px solid #fff;
+  text-align: left;
+}
+#nav ul a {
+  display: block;
+  line-height: 20px;
+  padding: 8px 5px;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: normal;
+}
+#nav ul a:hover {
+  background: transparent;
+  color: #4e4e4e;
+}
+#Cont {
+  width: 990px;
+  height: 570px;
+  margin-top: 12px;
+}
+#Cont #Coleft {
+  width: 185px;
+  height: 570px;
+  border: 1px solid #6e6e6e;
+}
+#Cont #Coleft h3 {
+  width: 171px;
+  height: 29px;
+  font-weight: bold;
+  color: white;
+  background: #6e6e6e;
+  line-height: 29px;
+  padding-left: 14px;
+}
+#Cont #Coleft p {
+  width: 185px;
+  height: 539px;
+}
+#Cont #Coleft p h2 {
+  width: 185px;
+  height: 128px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-left: 6px;
+}
+#Cont #Coleft p h2 a {
+  display: block;
+  width: 185px;
+  height: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+#Cont #Coleft p h2 span {
+  width: 90px;
+  height: 20px;
+  display: block;
+  margin: 3px 0px;
+  float: left;
+  color: #666666;
+}
+#Cont #Coleft p h2:first-child span:nth-of-type(2) {
+  padding-top: -10px;
+  color: red;
+  background: url(../img/hot.gif) no-repeat 52px 0px;
+}
+#Cont #Coleft p h2:first-child span:nth-of-type(7) {
+  padding-top: -10px;
+  color: red;
+  background: url(../img/hot.gif) no-repeat 28px 0px;
+}
+#Cont #Coright {
+  float: right;
+  width: 792px;
+  height: 570px;
+  margin: -570px 0 0 13px;
+}
+#Cont #Coright #CRTop {
+  width: 792px;
+  height: 320px;
+}
+#Cont #Coright #CRTop #CRTop_Left {
+  float: left;
+  width: 551px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+#Cont #Coright #CRTop #CRTop_Left .box2 {
+  width: 551px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+#Cont #Coright #CRTop #CRTop_Left .box2 p {
+  text-align: center;
+}
+#Cont #Coright #CRTop #CRTop_Left .picBox2 {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  width: 1500px;
+}
+#Cont #Coright #CRTop #CRTop_Left .picBox2:hover {
+  cursor: pointer;
+}
+#Cont #Coright #CRTop #CRTop_Left .picBox2 li {
+  float: left;
+}
+#Cont #Coright #CRTop #CRTop_Left .picBox2 img {
+  width: 551px;
+  height: 320px;
+}
+#Cont #Coright #CRTop #CRTop_Left span {
+  display: block;
+  width: 92px;
+  height: 38px;
+  text-align: center;
+  padding: 5px 8px;
+  opacity: 0.5;
+  background: red;
+  color: white;
+  font-weight: bold;
+  margin-top: -47px;
+  border-left: 2px solid slateblue;
+  float: left;
+}
+#Cont #Coright #CRTop #CRTop_Left .active {
+  width: 92px;
+  height: 38px;
+  background: #37a7d7;
+  opacity: 0.99;
+}
+#Cont #Coright #CRTop #CRTop_Right {
+  float: right;
+  margin: -320px 0 0 12px;
+  width: 231px;
+  height: 320px;
+}
+#Cont #Coright #CRTop #CRTop_Right .CRT {
+  width: 231px;
+  height: 175px;
+  overflow: hidden;
+}
+#Cont #Coright #CRTop #CRTop_Right .CRT img:hover {
+  -webkit-transform: rotate(360deg);
+  -webkit-transition: 3s;
+}
+#Cont #Coright #CRTop #CRTop_Right p {
+  width: 220px;
+  height: 25px;
+  font-weight: bold;
+  border: 1px solid #CCCCCC;
+  border-bottom: none;
+  line-height: 25px;
+  padding-left: 10px;
+  margin-top: 8px;
+}
+#Cont #Coright #CRTop #CRTop_Right .CRB {
+  width: 230px;
+  height: 111px;
+  border: 1px solid #CCCCCC;
+  overflow: hidden;
+}
+#Cont #Coright #CRTop #CRTop_Right .CRB ul li {
+  color: #666666;
+  display: block;
+  line-height: 20px;
+  padding-left: 10px;
+  margin-top: 3px;
+}
+#Cont #Coright #CRBottom {
+  margin-top: 15px;
+  width: 794px;
+  height: 230px;
+  overflow: hidden;
+}
+#Cont #Coright #CRBottom .aaa {
+  border-bottom: 1px solid;
+}
+#Cont #Coright #CRBottom h3 {
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+}
+#Cont #Coright #CRBottom .tab {
+  clear: both;
+  height: 210px;
+  width: 794px;
+}
+#Cont #Coright #CRBottom .tab p {
+  width: 184px;
+  height: 190px;
+  float: left;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+#Cont #Coright #CRBottom .tab p span {
+  display: block;
+  width: 184px;
+  height: 25px;
+  background: #efefef;
+  text-align: center;
+  line-height: 25px;
+  color: #666666;
+}
+#Cont #Coright #CRBottom .anniu {
+  float: right;
+}
+#Cont #Coright #CRBottom .anniu li {
+  float: left;
+  width: 50px;
+  height: 22px;
+  margin-left: 5px;
+  text-align: center;
+  background: yellow;
+}
+#Cont #Coright #CRBottom .anniu li:hover {
+  color: white;
+  background: deeppink;
+}
+#footer {
+  clear: both;
+  width: 990px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+		<script src="../../练习/h5特效/jquery-3.1.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/list.css" />
+		<script src="js/list.js"></script>
+	</head>
+
+	<body>
+		<!--head start-->
+		<div id="header">
+			<h1 class="fl"><img src="img/logo.gif"/></h1>
+			<input id="I" class="fl" type="text" placeholder="请输入商品名称" />
+			<div id="S" class="fr">
+				<span class="S1"></span>
+				<span class="S2"></span>
+				<span class="S3"></span>
+				<span class="S4"></span>
+				<span class="S5"></span>
+				<span class="S6"></span>
+			</div>
+		</div>
+		<!--head end-->
+		<!--header nav start-->
+		<ul id="nav">
+			<li>
+				<a href="项目1.html">首页</a>
+
+			</li>
+			<li>
+				<a href="javascript:;">品牌</a>
+				<ul>
+					<li>
+						<a href="#">奔儿了头</a>
+					</li>
+					<li>
+						<a href="#">波棱盖儿</a>
+					</li>
+					<li>
+						<a href="#">冬天也要露脚腕</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:;">男装</a>
+				<ul>
+					<li>
+						<a href="#">爱扒蒜</a>
+					</li>
+					<li>
+						<a href="#">爱白貂</a>
+					</li>
+					<li>
+						<a href="#">老妹儿你可慢点飘</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:;">女装</a>
+				<ul>
+					<li>
+						<a href="#">老雪花</a>
+					</li>
+					<li>
+						<a href="#">当水喝</a>
+					</li>
+					<li>
+						<a href="#">青春献给小酒桌</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:;">鞋包配饰</a>
+				<ul>
+					<li>
+						<a href="#">你不醉</a>
+					</li>
+					<li>
+						<a href="#">我不醉</a>
+					</li>
+					<li>
+						<a href="#">马路牙子谁来睡</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!--header nav end-->
+		<!--content start-->
+		<div id="Cont">
+			<!--left nav start-->
+			<div id="Coleft">
+				<h3 id="ColeftH3">商品分类</h3>
+				<p></p>
+			</div>
+			<!--left nav end-->
+			<!--big mirror start-->
+			<div id="Coright">
+				<div id="RL">
+					<!--images start-->
+					<div class="ONE" style="display: block;">
+						<div id="smallImg">
+							<img src="img/pro_img/blue_one_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/blue_one_big.jpg" />
+						</div>
+					</div>
+					<div class="TWO" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/green_one_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/green_one_big.jpg" />
+						</div>
+					</div>
+					<div class="THREE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/yellow_one_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+					<!--查看清晰图片 第一个颜色-->
+					<div class="OONE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/blue_one_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+
+					<div class="TTWO" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/blue_three_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+
+					<div class="TTHREE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/blue_two_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+					<!--查看清晰图片 第二个颜色-->
+					<div class="OOONE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/green_one_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+
+					<!--<div class="TTTWO" style="display: none;">
+		    			<div id="smallImg">
+			    			<img src="img/pro_img/green_three_small.jpg"/>
+			    			<div id="small"></div>
+			    		</div>
+			    		<div id="bigImg">
+			    			<img src="img/pro_img/yellow_one_big.jpg"/>
+			    		</div>
+		    		</div>-->
+
+					<div class="TTTHREE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/green_two_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+					<!--查看清晰图片 第三个颜色-->
+					<div class="OOOONE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/yellow_one_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+
+					<div class="TTTTWO" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/yellow_three_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+
+					<div class="TTTTHREE" style="display: none;">
+						<div id="smallImg">
+							<img src="img/pro_img/yellow_two_small.jpg" />
+							<div id="small"></div>
+						</div>
+						<div id="bigImg">
+							<img src="img/pro_img/yellow_one_big.jpg" />
+						</div>
+					</div>
+					<!--image end-->
+					<div id="Bottom">
+						<p><img src="img/look.gif" /></p>
+						<dl id="BDLone">
+							<dt class="BO"><img src="img/pro_img/blue_one.jpg"/></dt>
+							<dt class="BT"><img src="img/pro_img/blue_three.jpg"/></dt>
+							<dt class="BH"><img src="img/pro_img/blue_two.jpg"/></dt>
+						</dl>
+						<dl id="BDLtwo">
+							<dt class="BOO"><img src="img/pro_img/green_one.jpg"/></dt>
+							<dt class="BTT"><img src="img/pro_img/green_two.jpg"/></dt>
+						</dl>
+						<dl id="BDLthree">
+							<dt class="BOOO"><img src="img/pro_img/yellow_one.jpg"/></dt>
+							<dt class="BTTT"><img src="img/pro_img/yellow_three.jpg"/></dt>
+							<dt class="BHHH"><img src="img/pro_img/yellow_two.jpg"/></dt>
+						</dl>
+						<!--tab切换start-->
+						<div id="Tab">
+							<button>产品属性</button>
+							<button>产品尺码表</button>
+							<button>产品介绍</button>
+							<div class="Div activ">
+								1111舒适111的,健康设计理念,很好的,面料抗皱性非常好 舒适的,健康设计理念,很好的
+							</div>
+							<!--<div class="Div">
+								2222舒适222料抗皱性非常好
+							</div>
+							<div class="Div">
+								333舒适的333,健康设计理念,很好的,面料抗皱性非常好 舒适的,健康设计理念,
+							</div>-->
+						</div>
+						<!--tab切换end-->
+					</div>
+				</div>
+				<div id="RR">
+					<div id="RR1">
+						<h4>免烫高枝棉条纹衬衣</h4>
+						<p>
+							全新的高枝棉提升品质,精选100%新疆纯棉织造而成,平整度好，高枝棉而且光泽漂亮 全新的高枝棉提升品质,精选100%新疆纯棉织造而成,平整度好，高枝棉而且光泽漂亮 全新的高枝棉提升品质,精选100%新疆纯棉织造而成,平整度好，高枝棉而且光泽漂亮
+						</p>
+						<i href="javascript:;">价格：<span>379元</span></i>
+						<a href="javascrit:;">促销：<span id="MMM">200.00</span>元</a>
+					</div>
+					<div id="RR2">
+						<dl>
+							<dt>颜色:<a>未选择</a></dt>
+							<dd id="RDone"><img src="img/pro_img/blue.jpg" /></dd>
+							<dd id="RDtwo"><img src="img/pro_img/green.jpg" /></dd>
+							<dd id="RDthree"><img src="img/pro_img/yellow.jpg" /></dd>
+						</dl>
+						<dl>
+							<dt>尺寸:<a>未选择</a></dt>
+							<dd class="codeOne">S</dd>
+							<dd class="codeTwo">M</dd>
+							<dd class="codeThree">L</dd>
+							<dd class="codeFour">XL</dd>
+						</dl>
+						<div id="Number">
+							数量:
+							<select>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+						<div id="Sele">
+							收获地址:
+							<select id="SelOne"></select>
+							<select id="SelTwo" style="display: none;"></select>
+							<select id="SelThree" style="display: none;"></select>
+						</div>
+						<p>
+							总计: <span class="sum_price">200</span>元
+						</p>
+						<p class="Spa">
+							<b>商品评分:<a></a></b>
+							<s class="Spa_btn">
+							<span title="1"></span>
+							<span title="2"></span>
+							<span title="3"></span>
+							<span title="4"></span>
+							<span title="5"></span>
+							</s>
+						</p>
+						<h3><img src="img/btn_cart.png"/></h3>
+					</div>
+				</div>
+			</div>
+			<!--big mirror end-->
+		</div>
+		<!--content end-->
+		<!--footer start-->
+		<div id="footer">Copyright @ 2009 - 2016 JaneShop Inc</div>
+		<!--footer end-->
+		<!--shopping car start-->
+		<div id="shopping_car"></div>
+		<div id="popup">
+			<a href="javascript:;">关闭</a>
+			<dl>
+				<dt>您添加的商品: </dt>
+				<dd>颜色:</dd>
+				<dd>尺寸:</dd>
+				<dd>数量:</dd>
+				<dd>收获地址:</dd>
+				<dd>总计:</dd>
+				<dd>评分:</dd>
+				<strong id="ok">确定</strong>
+			</dl>
+		</div>
+		<!--shopping car end-->
+	</body>
+
+</html>

@@ -1,0 +1,76 @@
+*{margin: 0;padding: 0;}
+.g-show{
+	margin:50px 100px;
+	width: 310px;
+	height: 310px;
+	border: 1px solid;
+	position: relative;
+	overflow: hidden;
+}
+/*小方块*/
+.g-show .Sm{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 120px;
+	height: 120px;
+	background: yellow;
+	opacity: 0.3;
+	display: none;
+	border-radius: 20px;
+}
+.right{
+	width: 220px;
+	height: 50px;
+	position: absolute;
+	left: 500px;
+	top: 100px;
+}
+.right li{
+	list-style: none;
+	float: left;
+}
+.right li img{
+	margin: 5px;
+	border: 1px solid;
+}
+.down{
+	width: 280px;
+	height: 90px;
+	position:absolute;
+	left: 110px;
+	top: 400px;
+	overflow: hidden;
+}
+.down img{
+	margin: 5px 3px;
+}
+/*放大镜*/
+/*.all{
+	position: relative;
+}*/
+.bigImg{
+	position: relative;
+	left: 450px;
+	top:-360px;
+	width: 310px;
+	height: 310px;
+	border: 1px solid;
+	overflow: hidden;
+	display: none;
+}
+.bigImg img{
+	position: absolute;
+	/*left: 0;
+	top: 0;*/
+}
+.gq{
+	position: absolute;
+	left: 11px;
+	top: 410px;
+	width: 100px;
+	height: 20px;
+	/*background: red;*/
+	margin:-30px 200px;
+}

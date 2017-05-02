@@ -1,0 +1,182 @@
+  	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>项目一</title>
+		<script src="../../练习/h5特效/jquery-3.1.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>-->
+		<script src="js/a.js"></script>
+		<!--<script src="js/list.js"></script>-->
+	</head>
+	<style type="text/css">
+		.mo{
+			width: 200px;
+			height: 30px;
+			border: 1px solid;
+			background: white;
+			position: absolute;
+			z-index: 1;
+		}
+		.CRB ul li{
+			position: relative;
+		}
+	</style>
+	<body>
+		<!--头部-->
+		<div id="header">
+			<h1 class="fl"><img src="img/logo.gif"/></h1>
+			<input id="I" class="fl" type="text" placeholder="请输入商品名称"/>
+			<div id="S" class="fr">
+				<span class="S1" title="点我变换颜色"></span>
+				<span class="S2" title="点我变换颜色"></span>
+				<span class="S3" title="点我变换颜色"></span>
+				<span class="S4" title="点我变换颜色"></span>
+				<span class="S5" title="点我变换颜色"></span>
+				<span class="S6" title="点我变换颜色"></span>
+				
+			</div>
+		</div>
+			
+		<!--导航-->
+		<ul id="nav">
+			<li>
+				<a href="javascript:;">首页</a>
+				
+			</li>
+			<li>
+				<a href="详情页.html">品牌</a>
+				<ul>
+					<li><a href="#">奔儿了头</a></li>
+					<li><a href="#">波棱盖儿</a></li>
+					<li><a href="#">冬天也要露脚腕</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="详情页.html">男装</a>
+				<ul>
+					<li><a href="#">爱扒蒜</a></li>
+					<li><a href="#">爱白貂</a></li>
+					<li><a href="#">老妹儿你可慢点飘</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="详情页.html">女装</a>
+				<ul>
+					<li><a href="#">老雪花</a></li>
+					<li><a href="#">当水喝</a></li>
+					<li><a href="#">青春献给小酒桌</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="详情页.html">鞋包配饰</a>
+				<ul>
+					<li><a href="#">你不醉</a></li>
+					<li><a href="#">我不醉</a></li>
+					<li><a href="#">马路牙子谁来睡</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<!--内容-->
+	    <div id="Cont">
+	    	<!--左侧导航栏-->
+	    	<div id="Coleft">
+	    		<h3 id="ColeftH3">商品分类</h3>
+	    		<p></p>
+	    	</div>
+	    	<!--右边内容-->
+	    	<div id="Coright">
+	    		<div id="CRTop">
+	    			
+	    		    <!--轮播图-->
+	    			<div id="CRTop_Left">
+		    			
+		    			<div class="box2">
+							<ul class="picBox2">
+								<li><img src="img/ads/1.jpg"/></li>
+								<li><img src="img/ads/2.jpg"/></li>
+								<li><img src="img/ads/3.jpg"/></li>
+								<li><img src="img/ads/4.jpg"/></li>
+								<li><img src="img/ads/5.jpg"/></li>
+							</ul>
+						</div>
+		    			<span class="active">相约情人节全场199元起</span>
+	    				<span>相约情人节全场199元起</span>
+	    				<span>相约情人节全场199元起</span>
+	    				<span>相约情人节全场199元起</span>
+	    				<span>相约情人节全场199元起</span>
+		    		</div>	
+	    				
+	    			
+	    			
+	    			<div id="CRTop_Right">
+	    				<!--旋转图片-->
+	    				<div class="CRT"><img src="img/upload/20120216.jpg"/></div>
+	    				<!--最新动态-->
+	    				<p>最新动态</p>
+	    				<div class="CRB">
+	    					<ul class="oul">
+	    						<!--<marquee direction="up">--><!--向上滚动-->
+		    						<!--<li title="[大卖]用雕牌没污渍">[大卖]用雕牌没污渍</li>
+		    						<li title="[活动]2016年大甩卖促销">[活动]2016年大甩卖促销</li>
+		    						<li title="[热点]双十二全场半价">[热点]双十二全场半价</li>
+		    						<li title="[新闻]蒙牛牛奶买二送一">[新闻]蒙牛牛奶买二送一</li>
+		    						<li title="[活动]买泡面送辣条">[活动]买泡面送辣条</li>-->
+		    						
+		    						<li><span>[大卖]用雕牌没污渍</span></li>
+		    						<li><span>[活动]2016年大甩卖促销</span></li>
+		    						<li><span>[热点]双十二全场半价</span></li>
+		    						<li><span>[新闻]蒙牛牛奶买二送一</span></li>
+		    						<li><span>[活动]买泡面送辣条</span></li>
+	    						<!--</marquee>-->
+	    					</ul>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<!--tab切换start-->
+	    		<div id="CRBottom">
+	    			<div class="aaa">
+	    				 <h3>品牌活动</h3>
+			    		  <ul class="anniu">
+			    		 	<li>男鞋</li>
+			    		 	<li>女鞋</li>
+			    		 	<li>童鞋</li>
+			    		 	<li>运动</li>
+			    		  </ul>
+	    			</div>
+	    		
+	    		  <div class="tab">
+	    		  	<p><img src="img/upload/20120217.jpg"/><span>耐克</span></p>
+	    		  	<p><img src="img/upload/20120218.jpg"/><span>阿迪达斯</span></p>
+	    		  	<p><img src="img/upload/20120219.png"/><span>特步</span></p>
+	    		  	<p><img src="img/upload/20120220.png"/><span>安踏</span></p>
+	    		  </div>
+	    		  <div class="tab">
+	    		  	<p><img src="img/upload/20120219.png"/><span>阿迪达斯</span></p>
+	    		  	<p><img src="img/upload/20120217.jpg"/><span>特步</span></p>
+	    		  	<p><img src="img/upload/20120218.jpg"/><span>耐克</span></p>
+	    		  	<p><img src="img/upload/20120220.png"/><span>安踏</span></p>
+	    		  </div>
+	    		  <div class="tab">
+	    		  	<p><img src="img/upload/20120220.png"/><span>特步</span></p>
+	    		  	<p><img src="img/upload/20120217.jpg"/><span>耐克</span></p>
+	    		  	<p><img src="img/upload/20120218.jpg"/><span>阿迪达斯</span></p>
+	    		  	<p><img src="img/upload/20120219.png"/><span>安踏</span></p>
+	    		  </div>
+	    		  <div class="tab">
+	    		  	<p><img src="img/upload/20120217.jpg"/><span>安踏</span></p>
+	    		  	<p><img src="img/upload/20120219.png"/><span>特步</span></p>
+	    		  	<p><img src="img/upload/20120220.png"/><span>安踏</span></p>
+	    		  	<p><img src="img/upload/20120218.jpg"/><span>阿迪达斯</span></p>
+	    		  </div>
+	    		</div>
+	    		<!--tab切换end-->
+	    	</div>
+	    </div>
+	    <!--底部-->
+	    <div id="footer">Copyright @ 2009 - 2016 JaneShop Inc</div>
+	</body>
+	
+</html>
+
