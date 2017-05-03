@@ -1,0 +1,77 @@
+<!DOCTYPE htwml>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			  box-sizing: border-box;
+		}
+        html{
+        	  background: red;
+        	  height: 100%;
+        }
+        body{
+        	 width: 20em;
+        	 height: 20em;
+        	 left: 50%;
+        	 top: 50%;
+        	 margin-left: -10em;
+        	 margin-right: -10em;
+        	 position: absolute;
+    }
+     cube *{
+     	 background: darkblue;
+     	 height: 20em;
+     	 width: 20em;
+     	 display: block;
+     	 position: absolute;
+     	 border: 2px solid fuchsia;
+       }
+       cube{
+       	animation: 5s spin  linear infinite;
+      	height: 100%;
+      	width: 100%;
+       	position: absolute;
+       	-webkit-transform-style:preserve-3d;       	
+       } 
+        
+      @-webkit-keyframes  spin{
+      	  from{
+      	  	 transform: translateZ(-10em) rotateX(0deg) rotateY(0deg);
+      	  }
+      	  to{
+      	  	 transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+      	  }
+      } 
+      back{
+      	transform: rotateX(180deg)  translateZ(10em);
+      }  
+         top{
+      	transform: rotateX(-90deg)  translateZ(10em);
+      } 
+          buttom{
+      	transform: rotateX(0deg)  translateZ(10em);
+      } 
+          left{
+      	transform: rotateY(-90deg)  translateZ(10em);
+      } 
+          right{
+      	transform: rotateY(90deg)  translateZ(10em);
+      } 
+          front{
+      	transform: rotateX(90deg)  translateZ(10em);
+      } 
+		</style>
+</head>
+	<body>
+		<cube>
+			      <back style="background:darkcyan;"></back>
+			      <top style="background:saddlebrown;"></top>
+			      <buttom style="background:salmon;"></buttom>
+			      <left style="background:firebrick;"></left>
+			      <right style="background:skyblue;"></right>
+			      <front style="background:chartreuse;"></front>
+      </cube>
+	</body>
+</html>
