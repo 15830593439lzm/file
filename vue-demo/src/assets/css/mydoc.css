@@ -5,12 +5,12 @@
 		}
 		.container{
 			width: 100%;
-			height: auto;
+			height: 1000px;
 			margin: 10px auto;
 		}
 		.container li{
 			float: left;
-			width: 100%;
+			width: 288px;
 			height:180px;
 			float: left;
 			margin-right: 10px;
@@ -19,12 +19,12 @@
 			box-shadow: 0 1px 2px rgba(75,75,75,0.3);
 		}
 		.container li a,img{
-			width: 100%;
+			width: 288px;
 			height: 180px;
 			display: block;
 			border-radius: 10px;
 		}
 		.container li a:hover img{
-			opacity: 0.5;
+			opacity: 0.8;
 			filter:alpha(opacity=80);
 		}
