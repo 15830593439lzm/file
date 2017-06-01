@@ -1,0 +1,241 @@
+@import url("reset.css");
+.spc-14 {
+  font-size: 14px;
+  color: blue; }
+
+.spc-18 {
+  font-size: 18px;
+  color: red; }
+
+.spc-22 {
+  font-size: 22px;
+  color: green; }
+
+html {
+  font-size: 62.5%; }
+
+.full,
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: none; }
+
+.full {
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  .full header {
+    width: 100%;
+    height: 4rem;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0.2rem 0.1rem 0.5rem #C0C0C0; }
+    .full header .header-left {
+      width: auto;
+      height: auto;
+      background: none;
+      padding: 1.2rem 1rem; }
+      .full header .header-left img {
+        width: 0.9rem;
+        height: 1.4rem;
+        background: none; }
+    .full header .header-center {
+      flex: 1;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 4rem; }
+    .full header .header-right {
+      width: auto;
+      height: auto;
+      background: none;
+      padding: 1rem; }
+  .full .search {
+    width: auto;
+    height: 5rem;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: row; }
+    .full .search input {
+      flex: 1;
+      border-radius: 1rem;
+      width: auto;
+      height: 3.5rem;
+      background: none;
+      margin: 0.7rem;
+      padding-left: 3.5rem;
+      outline: none;
+      border: none;
+      background: #fff url("../img/seach.jpg") no-repeat 1rem;
+      background-size: 1.5rem; }
+  .full section {
+    flex: 1;
+    overflow: auto; }
+    .full section::-webkit-scrollbar {
+      width: 0; }
+    .full section .focus {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: 5rem;
+      background: none;
+      border-bottom: 1px solid #ccc; }
+      .full section .focus .focus-left {
+        flex: 1;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        line-height: 5rem; }
+      .full section .focus .focus-right {
+        width: 3.5rem;
+        height: 5rem;
+        background: none;
+        line-height: 5rem; }
+        .full section .focus .focus-right img {
+          margin-left: 1rem; }
+    .full section .programa {
+      width: auto;
+      height: 3.5rem;
+      background: none;
+      font-size: 1.5rem;
+      line-height: 3.5rem;
+      background: #f0f0f0 url(../img/red.jpg) no-repeat 1.2rem;
+      background-size: 0.8rem;
+      padding-left: 2.5rem; }
+    .full section .focus-con {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #CDCDCD; }
+      .full section .focus-con .focus-con-left {
+        width: 7rem;
+        height: 7.1rem;
+        background: none; }
+        .full section .focus-con .focus-con-left img {
+          width: 3.8rem;
+          height: 3.8rem;
+          background: none;
+          margin: 1.5rem; }
+      .full section .focus-con .focus-con-conter {
+        flex: 1; }
+        .full section .focus-con .focus-con-conter dl {
+          margin-top: 1.6rem; }
+          .full section .focus-con .focus-con-conter dl dt {
+            font-size: 1.7rem; }
+          .full section .focus-con .focus-con-conter dl dd {
+            color: #C0C0C0; }
+      .full section .focus-con .focus-con-right {
+        width: 6rem;
+        height: 7.1rem;
+        background: none; }
+        .full section .focus-con .focus-con-right p {
+          width: 4.8rem;
+          height: 2.5rem;
+          background: none;
+          border: 1px solid #C0C0C0;
+          border-radius: 0.6rem;
+          margin: 2.2rem 1rem 2.2rem 0;
+          line-height: 2.5rem;
+          text-align: center; }
+    .full section .cc {
+      width: auto;
+      height: 15rem;
+      background: none;
+      border-bottom: 1px solid #CDCDCD; }
+      .full section .cc .focus-c {
+        display: flex;
+        flex-direction: row; }
+        .full section .cc .focus-c .focus-c-left {
+          width: auto;
+          height: 7rem;
+          background: none; }
+          .full section .cc .focus-c .focus-c-left img {
+            width: 3.8rem;
+            height: 3.8rem;
+            background: none;
+            margin: 1.5rem; }
+        .full section .cc .focus-c .focus-c-con {
+          flex: 1; }
+          .full section .cc .focus-c .focus-c-con dl {
+            margin-top: 1.6rem; }
+            .full section .cc .focus-c .focus-c-con dl dt {
+              font-size: 1.7rem; }
+            .full section .cc .focus-c .focus-c-con dl dd {
+              color: #C0C0C0; }
+        .full section .cc .focus-c .focus-c-right {
+          width: auto;
+          height: 7rem;
+          background: none; }
+          .full section .cc .focus-c .focus-c-right p {
+            width: 4.8rem;
+            height: 2.5rem;
+            background: none;
+            border: 1px solid red;
+            color: red;
+            border-radius: 0.6rem;
+            margin: 2.2rem 1rem 2.2rem 0;
+            line-height: 2.5rem;
+            text-align: center; }
+      .full section .cc .m a {
+        display: inline-block;
+        width: 5rem;
+        height: 1.5rem;
+        background: none;
+        text-align: center;
+        line-height: 1.5rem;
+        margin-left: -0.3rem;
+        border: 1px solid #ccc;
+        border-radius: 0.6rem;
+        color: #C0C0C0; }
+      .full section .cc .m p {
+        margin: 1rem;
+        color: #C0C0C0; }
+    .full section .more {
+      width: 100%;
+      height: 5rem;
+      background: none;
+      border-bottom: 1px solid #C0C0C0;
+      text-align: center;
+      line-height: 5rem; }
+      .full section .more a {
+        color: #303030;
+        font-size: 1.7rem; }
+  .full footer {
+    width: 100%;
+    height: 4.8rem;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+    box-shadow: 0.2rem -0.1rem 0.5rem #C0C0C0; }
+    .full footer dl {
+      flex: 1;
+      text-align: center;
+      margin-top: 0.6rem; }
+      .full footer dl img {
+        width: 2.5rem;
+        height: 2.2rem;
+        background: none; }
+    .full footer dl:hover {
+      background: pink;
+      color: red; }
+  .full .shade {
+    width: 100%;
+    height: 18rem;
+    background: #ccc;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    display: none; }
+    .full .shade ul li {
+      width: 6rem;
+      height: 4.2rem;
+      background: yellow;
+      float: left;
+      margin: 0.8rem 1.3rem;
+      border-radius: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 4.2rem; }
