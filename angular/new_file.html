@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="new_file.css" />
+		<link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="cotent" ng-app="myApp" ng-controller="firstController">
+			   <header>
+			   	  <span>&lt;返回</span>
+			   	  <b>商店</b>
+			   	  <a href="#">...</a>
+			   </header>
+			   <section>
+			   	    <div class="banner">
+			   	    	   	  <span>返回</span>
+			   	    	   <div class="input_s">
+                         	<span>商店</span>
+			   	    	   	 <input type="text" placeholder="搜索：商品/品牌" />
+			   	    	   </div>
+	                </div>
+	                 <div class="banner_two" >
+	                	<span ng-repeat="v in dataInfo">
+	                	
+	                		<li ng-repeat="val in v.datatit">  {{val.titinfo}} <a href="#">|</a></li>
+	                		
+	                	</span>
+	                	
+	                </div>
+	                  <div class="banner_father" ng-repeat="v in dataInfo">
+	                <div class="banner_there"  ng-repeat=" val in v.datalist">
+	                	 <dl>
+	                	<!--{{val}}-->
+	                	      
+	                	 	<dt><img src="{{val.images}}"/></dt>
+	                	 	<dd>
+	                	 		 <h1>{{val.dataname}}</h1>
+	                	 		 <a href="#">{{val.datacity}}</a>
+	                	 		 <p>
+	                	 		 	<i><img src="images/未标题-1.jpg" alt="" />{{val.history}}</i>
+	                	 		 	<i><img src="images/未标题-4.jpg" alt="" />{{val.distance}}</i>
+	                	 		 </p>
+	                	 	</dd>
+	                	 	
+            </dl>
+	                 <span>{{val.datainfo}}</span>
+	                </div>
+	                </div>
+	                
+	                
+	                
+	                <!--<div class="banner_two">
+	                	<span>全部商品<i></i> <a href="#">|</a></span>
+	                	<span>全部商品 <i></i><a href="#">|</a></span>
+	                	<span>全部商品<i></i></span>
+	                </div>
+	                <div class="banner_father">
+	                <div class="banner_there"  >
+	                	 <dl >
+	                	 	<dt><img src="img/未标题-3.jpg"/></dt>
+	                	 	<dd>
+	                	 		 <h1>江户和工装房·上课是</h1>
+	                	 		 <a href="#">台东区</a>
+	                	 		 <p>
+	                	 		 	<i><img src="img/未标题-4.jpg" alt="" />741人收藏</i>
+	                	 		 	<i><img src="img/未标题-4.jpg" alt="" />2111.3km</i>
+	                	 		 </p>
+	                	 	</dd>
+            </dl>
+	                 <span>胜多负少空间发挥空间是否施工方间是否施工方</span>
+	                </div>
+	                </div>-->
+			   </section>
+			   <footer>
+			   	 <dl>
+			   	 	<dt><img src="images/未标题-1.jpg" alt="" /></dt>
+			   	 	<dd>热门</dd>
+			   	 </dl>	 <dl>
+			   	 	<dt><img src="images/未标题-2.jpg" alt="" /></dt>
+			   	 	<dd>热门</dd>
+			   	 </dl>
+			   	 	 <dl>
+			   	 	<dt><img src="images/未标题-1.jpg" alt="" /></dt>
+			   	 	<dd>热门</dd>
+			   	 </dl>
+			   	 	 <dl>
+			   	 	<dt><img src="images/未标题-1.jpg" alt="" /></dt>
+			   	 	<dd>热门</dd>
+			   	 </dl>
+			   	 	 <dl>
+			   	 	<dt><img src="images/未标题-1.jpg" alt="" /></dt>
+			   	 	<dd>热门</dd>
+			   	 </dl>
+			   </footer>
+			
+		</div>
+	</body>
+<!--	<script type="text/javascript" src="img/jquery-3.1.1.js"></script>-->
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<script>
+		var app=angular.module("myApp",[]);
+		     app.controller("firstController",function($scope,$http){
+		     	$http.get("data.json").then(function(mydata){
+		     		$scope.dataInfo = mydata;
+		     		console.log(mydata);
+		     	})
+		     })
+	</script>
+	<!--<script type="text/javascript">
+		   $.ajax({
+		   	type:"get",
+		   	url:"data (2).json",
+		   	async:true,
+		   	data:{},
+		   	success:function(data){
+		   	 $.each(data.datalist,function(i,v){
+		   	 	 $(".banner_father").append("<div class='banner_there'><dl><img src='img/未标题-3.jpg'/><dt></dt><dd><h1>"+v.dataname+"</h1><a>"+v.datacity+"</a><p><i><img src='img/未标题-4.jpg'/>"+v.distance+"</i><i><img src='img/未标题-5.jpg'/>"+v.history+"</i></p></dd></dl><span>"+v.datainfo+"</span></div>")
+		   	 })
+		   	}
+		   });
+	</script>-->
+</html>

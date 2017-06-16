@@ -1,0 +1,175 @@
+@import url("reset.css");
+.full(@w,@h,@bg){
+     width: @w;
+     height: @h;
+     background: @bg;
+}
+.box(@dir:vertical){
+     display: -webkit-box;
+     -webkit-box-orient:@dir ;//horizontal
+}
+html{
+     font-size: 62.5%;
+}
+html,body,.cotent{
+       .full(100%,100%,none);
+  }
+ .cotent{
+     .box();
+  header{
+          .box(horizontal);
+          .full(100%,3.8rem,#191b20);
+          color: #FFF;
+          font-size: 16px;
+          line-height: 3.8rem;
+          span{
+            padding-left: 0.8rem;
+      
+          } 
+          b{
+               display: block;
+               text-align: center;
+              -webkit-box-flex: 1;
+          }
+          a{
+              
+              color: #fff;
+              text-decoration: none;
+              padding-right: 0.8rem;
+           
+          }
+     }
+     section{
+          overflow-y: auto;
+            .box();
+//          .full(100%,auto,none);
+            -webkit-box-flex: 1;
+           .banner{
+                  .box(horizontal);
+               .full(100%,5.2rem,none);
+               line-height: 5.2rem;
+     
+                 span{
+                   color: black;
+                   padding-left: 1.3rem;
+               }
+               .input_s{
+                   position: relative;
+                   padding-left: 2rem;
+                   -webkit-box-flex: 1;
+                   span{
+                       position: absolute;
+                       left: 2rem;
+                     
+                   }
+                  input{
+                       outline: initial;
+                      .full(90%,2.6rem,#eeeced);
+                    border-radius: 20px;
+                    padding-left: 4rem;
+                    border:none;
+                   }
+               }
+           } 
+           .banner_two{
+               .box(horizontal);
+                .full(100%,3.5rem,none);
+                line-height: 3.5rem;
+               
+                font-size: 14px;
+                 font-weight: bold;
+               border-top: 5px solid #CECECE;
+               border-bottom: 1px  solid #CECECE;
+               span{
+                     display: block;
+                     text-align: center;
+                   -webkit-box-flex: 1;
+                   li{
+//                    display: inline-block;
+                       margin-left: 2rem;
+//                     .full(0.8rem,0.8rem,none);
+////                     border: 1px solid black;
+//                     transform: rotateZ(45deg);
+//                     border-left: none;
+//                     border-top: none;
+float: left;
+                   
+                   }
+                   a{
+                       opacity: 0.1;
+                       margin-left: 0.8rem;
+                   }
+                  
+               }
+           }
+           .banner_there{
+              
+               border-bottom: 1px solid #CECECE;
+               padding-bottom: 1.5rem;
+               .full(100%,auto,none);
+               .box();
+               dl{
+                   .box(horizontal);
+                    .full(100%,6rem,none);
+                   -webkit-box-flex: 1;
+                   margin-top: 1.6rem;
+                
+               
+                   dd{
+                
+                       margin-left: 0.8rem;
+                       -webkit-box-flex: 1;
+                       h1{
+                           font-weight: bold;
+                           font-family: 12px;
+                       }
+                       a{
+                           display: inline-block;
+                            color: #c7d3d7;
+                           text-decoration: none;
+                           font-size: 12px;
+                           padding-top: 0.4rem;
+                       }
+                       p{
+                            margin-top: 1rem;
+                            i{
+                                font-style: normal;
+                                margin-right: 1.2rem;
+                                color: #c7d3d7;
+                            }
+                       }
+                       
+                   }
+               }
+           span{
+                font-size: 14px;
+                color: #c7d3d7;
+                margin-left: 0.4rem;
+                margin-top: 0.8rem;
+             
+                
+           }
+   }
+   .banner_father{
+        padding: 0 0.8rem;
+        
+   }
+          
+     }
+     footer{
+         padding-top: 0.2rem;
+          .box(horizontal);
+          .full(100%,4.4rem,#fff);
+       
+           text-align: center;
+          dl{
+              -webkit-box-flex: 1;  
+          }
+          dl:nth-child(2){
+               color: red;
+              margin-top: 0.4rem;
+          }
+     }
+ }
+  
+

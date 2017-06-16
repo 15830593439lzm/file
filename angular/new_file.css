@@ -1,0 +1,165 @@
+@import url("reset.css");
+html {
+  font-size: 62.5%;
+}
+html,
+body,
+.cotent {
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+.cotent {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.cotent header {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  width: 100%;
+  height: 3.8rem;
+  background: #191b20;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 3.8rem;
+}
+.cotent header span {
+  padding-left: 0.8rem;
+}
+.cotent header b {
+  display: block;
+  text-align: center;
+  -webkit-box-flex: 1;
+}
+.cotent header a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 0.8rem;
+}
+.cotent section {
+  overflow-y: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-flex: 1;
+}
+.cotent section .banner {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  width: 100%;
+  height: 5.2rem;
+  background: none;
+  line-height: 5.2rem;
+}
+.cotent section .banner span {
+  color: black;
+  padding-left: 1.3rem;
+}
+.cotent section .banner .input_s {
+  position: relative;
+  padding-left: 2rem;
+  -webkit-box-flex: 1;
+}
+.cotent section .banner .input_s span {
+  position: absolute;
+  left: 2rem;
+}
+.cotent section .banner .input_s input {
+  outline: initial;
+  width: 90%;
+  height: 2.6rem;
+  background: #eeeced;
+  border-radius: 20px;
+  padding-left: 4rem;
+  border: none;
+}
+.cotent section .banner_two {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  width: 100%;
+  height: 3.5rem;
+  background: none;
+  line-height: 3.5rem;
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 5px solid #CECECE;
+  border-bottom: 1px  solid #CECECE;
+}
+.cotent section .banner_two span {
+  display: block;
+  text-align: center;
+  -webkit-box-flex: 1;
+}
+.cotent section .banner_two span li {
+  margin-left: 2rem;
+  float: left;
+}
+.cotent section .banner_two span a {
+  opacity: 0.1;
+  margin-left: 0.8rem;
+}
+.cotent section .banner_there {
+  border-bottom: 1px solid #CECECE;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  height: auto;
+  background: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.cotent section .banner_there dl {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  width: 100%;
+  height: 6rem;
+  background: none;
+  -webkit-box-flex: 1;
+  margin-top: 1.6rem;
+}
+.cotent section .banner_there dl dd {
+  margin-left: 0.8rem;
+  -webkit-box-flex: 1;
+}
+.cotent section .banner_there dl dd h1 {
+  font-weight: bold;
+  font-family: 12px;
+}
+.cotent section .banner_there dl dd a {
+  display: inline-block;
+  color: #c7d3d7;
+  text-decoration: none;
+  font-size: 12px;
+  padding-top: 0.4rem;
+}
+.cotent section .banner_there dl dd p {
+  margin-top: 1rem;
+}
+.cotent section .banner_there dl dd p i {
+  font-style: normal;
+  margin-right: 1.2rem;
+  color: #c7d3d7;
+}
+.cotent section .banner_there span {
+  font-size: 14px;
+  color: #c7d3d7;
+  margin-left: 0.4rem;
+  margin-top: 0.8rem;
+}
+.cotent section .banner_father {
+  padding: 0 0.8rem;
+}
+.cotent footer {
+  padding-top: 0.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  width: 100%;
+  height: 4.4rem;
+  background: #ffffff;
+  text-align: center;
+}
+.cotent footer dl {
+  -webkit-box-flex: 1;
+}
+.cotent footer dl:nth-child(2) {
+  color: red;
+  margin-top: 0.4rem;
+}
